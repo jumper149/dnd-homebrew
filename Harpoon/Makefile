@@ -1,6 +1,6 @@
 PDFC=pdflatex
 CFLAGS=-interaction nonstopmode -halt-on-error -file-line-error
-export TEXINPUTS=../lib//
+export TEXINPUTS=../lib//:
 
 build:
 	$(PDFC) $(CFLAGS) main.tex
