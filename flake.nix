@@ -29,8 +29,9 @@
     devShells.x86_64-linux.default =
       with import nixpkgs { system = "x86_64-linux"; };
       mkShell {
-        buildInputs = with pkgs; [
-          ((callPackage self.packages.x86_64-linux.default {}).buildInputs)
+        buildInputs = [
+          texlive.combined.scheme-full
+          biber
         ];
       };
 
