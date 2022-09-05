@@ -1,8 +1,5 @@
-PDFC=pdflatex
-CFLAGS=-interaction nonstopmode -halt-on-error -file-line-error
-
 build:
-	cd Harpoon/ && $(PDFC) $(CFLAGS) main.tex
+	cd Harpoon/ && make
 
 clean:
-	cd Harpoon/ && rm -f main.aux main.log main.out
+	cd Harpoon/ && make clean
