@@ -123,4 +123,76 @@ The living harpoon/speargun inherits all the regular stats, but gets one more pr
 \subparagraph{Special (Living Harpoon/Speargun)}
 When you hit a target, you can use spells, that would require \emph{Touch}, as long as the tether is connected you.
 
+\section{Monsters}
+
+\begin{DndMonster}{Sperm Whale}
+  % Sources:
+  % https://www.aidedd.org/dnd/monstres.php?vo=sperm-whale
+  % https://www.reddit.com/r/DnD/comments/n51zdv/is_it_just_me_or_is_the_sperm_whales_swallowing_a/
+  \DndMonsterType{Gargantuan beast, unaligned}
+
+  \DndMonsterBasics[
+      armor-class = {13 natural armor},
+      hit-points  = {\DndDice{14d20 + 42}},
+      speed       = {0 ft., swim 60 ft.},
+    ]
+
+  \DndMonsterAbilityScores[
+      str = 26,
+      dex = 8,
+      con = 17,
+      int = 3,
+      wis = 12,
+      cha = 5,
+    ]
+
+  \DndMonsterDetails[
+      %saving-throws = {Str +0, Dex +0, Con +0, Int +0, Wis +0, Cha +0},
+      %skills = {Acrobatics +0, Animal Handling +0, Arcana +0, Athletics +0, Deception +0, History +0, Insight +0, Intimidation +0, Investigation +0, Medicine +0, Nature +0, Perception +0, Performance +0, Persuasion +0, Religion +0, Sleight of Hand +0, Stealth +0, Survival +0},
+      %damage-vulnerabilities = {cold},
+      %damage-resistances = {bludgeoning, piercing, and slashing from nonmagical attacks},
+      %damage-immunities = {poison},
+      %condition-immunities = {poisoned},
+      senses = {blindsight 120 ft., passive Perception 11},
+      %languages = {},
+      challenge = 8,
+    ]
+
+  % Traits
+  \DndMonsterAction{Echolocation}
+  The whale can't use its blindsight while deafened.
+  \DndMonsterAction{Hold Breath}
+  The whale can hold its breath for 30 minutes.
+  \DndMonsterAction{Keen Hearing}
+  The whale has advantage on Wisdom (Perception) checks that rely on hearing.
+
+  \DndMonsterSection{Actions}
+  \DndMonsterMelee[
+    name=Bite,
+    mod=+11,
+    %reach=5,
+    %targets=one target,
+    dmg=\DndDice{3d8+8},
+    dmg-type=piercing,
+    %plus-dmg=\DndDice{2d6},
+    %plus-dmg-type=fire,
+    %or-dmg=\DndDice{1d10+1},
+    %or-dmg-when=if used with two hands,
+    extra={. If the target is a Large or smaller creature, it must succeed on a DC 14 Dexterity saving throw or be swallowed by the whale. A swallowed creature has total cover against attacks and other effects outside the whale, and it takes 3 (1d6) acid damage at the start of each of the whale's turns. If the whale takes 30 damage or more on a single turn from a creature inside it, the whale must succeed on a DC 16 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the whale. If the whale dies, a swallowed creature can escape from the corpse by using 20 feet of movement, exiting prone},
+  ]
+  \DndMonsterMelee[
+    name=Tail,
+    mod=+11,
+    reach=15,
+    %targets=one target,
+    dmg=\DndDice{3d6+8},
+    dmg-type=bludgeoning,
+    %plus-dmg=\DndDice{2d6},
+    %plus-dmg-type=fire,
+    or-dmg=\DndDice{6d6+16},
+    or-dmg-when=if the target is an object,
+    %extra={},
+  ]
+\end{DndMonster}
+
 \end{document}
