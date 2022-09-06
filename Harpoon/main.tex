@@ -50,37 +50,69 @@
 \section{Weapons}
 
 \subsection{Harpoon}
-
 The harpoon is a weapon used for hunting whales.
-Watch out for the shot if you can hear someone shout "There she blows!".
+It is basically a spear attached to a rope.
+
+Watch out if you can hear someone shout ``There she blows!''.
+
+\begin{DndTable}{XX}
+    \textbf{Property}  & \textbf{Value} \\
+    Cost & 10 gp \\
+    Damage & 1d6 Piercing \\
+    Weight & 6 lbs \\
+    Thrown & 20/30 \\
+    Versatile & 1d6 \\
+    Tether & 30 \\
+    Stuck & 1d4 Slashing / 1d8 Slashing \\
+    Properties & Special, Stuck, Tether, Thrown, Versatile
+\end{DndTable}
+
+\subparagraph{Special (Harpoon)}
+When the harpoon is dropped on the battlefield, because of a missed throw or after removal, you can use a bonus action to pull it back.
+
+\subsection{Speargun}
+A device, to shoot a small harpoon.
+It uses a spring mechanism to shoot a tethered projectile.
+
 \begin{DndTable}{XX}
     \textbf{Property}  & \textbf{Value} \\
     Cost & 75 gp \\
-    Damage & 1d8 piercing \\
-    Weight & 12 lbs \\
-    Properties & Two-Handed, Range (40/80), Ammunition (1), Loading, Special
+    Damage & 1d4 Piercing \\
+    Weight & 10 lbs \\
+    Range & 40/60 \\
+    Ammunition & 1 \\
+    Tether & 60 \\
+    Stuck & 1d4 Slashing / 1d8 Slashing \\
+    Properties & Ammunition, Loading, Range, Special, Stuck, Tether, Two-Handed
 \end{DndTable}
 
-When you attack with the harpoon, a spear-like arrow is shot from the harpoon.
+\subparagraph{Special (Speargun)}
+When the projectile is dropped on the battlefield it is automatically pulled back by a spring mechanism inside the speargun and will be loaded for the next attack.
 
-The arrow is attached to the harpoon by hempen rope reinforced with metal wires.
-The rope uses a spring mechanism, that automatically pulls the spear back, when there is no resistance to it.
-This force is not able to move any targets, but it reloads the harpoon when a shot misses or the spear is removed from a target.
-A hit target can move freely in the circle around the shooter with the shooting distance as a radius.
-When the target is closing in on the shooter, the circle becomes smaller.
+\subsection{Properties}
 
-If a creature tries to run out of this circle, while attached with the rope, that creature must make a DC 14 saving throw.
-On a successful saving throw the creature drags the shooter around.
-On failure the creature takes 1d4 piercing damage and is still attached to the harpoon.
+\subparagraph{Tether}
+When an attacker hits a target, they become tethered to each other.
+A tethered creature's movement is limited by the distance of the tether.
 
-A hit target can use its action to pull out the spear by making a DC 12 Strength check.
-On success the creature takes 2d6 slashing damage and the spear is dropped to the ground.
-On failure the creature takes 1d4 piercing damage and is still attached to the harpoon.
+When trying to move out of the maximum distance of the tether, the moving creature tries to drag the one at the other end of the tether around.
+The maximum distance is given explicitly in feet.
 
-% The damages and DCs are just what came to my mind.
-%
-% Maybe additionally:
-% The connection can be cut by the target or any other creature next to the rope.
-% To do this, the creature must deal 20 slashing damage to the rope (AC 10).
+To pull, the moving creature must make a Strength (Athletics) check.
+
+\begin{center}
+    \mbox{\bf Pull check DC} = \mbox{10} + \mbox{pulled creature's Strength modifier}
+\end{center}
+
+On a successful check, the creature can move freely and drag the other creature around.
+On a failed save, the creature's movement is still constrained by the maximum distance of the tether.
+
+\subparagraph{Stuck}
+A weapon or projectile gets stuck, when it hits a target.
+Anyone in reach can use an action to remove the stuck item.
+
+When removing a stuck item, you must make a Wisdom (Medicine) check (DC 10). 
+The stuck property lists two damage values.
+The left one will be dealt to the target on a successful check and the right one on a failed check.
 
 \end{document}
