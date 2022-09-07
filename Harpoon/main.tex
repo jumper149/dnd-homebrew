@@ -277,4 +277,54 @@ When you hit a target, you can use spells, that would require \emph{Touch}, as l
   ]
 \end{DndMonster}
 
+\begin{DndMonster}[float=b]{Giant Squid}
+  \DndMonsterType{Gargantuan beast, unaligned}
+
+  \DndMonsterBasics[
+      armor-class = {12 natural armor},
+      hit-points  = {\DndDice{10d12 + 10}},
+      speed       = {0 ft., swim 50 ft.},
+    ]
+
+  \DndMonsterAbilityScores[
+      str = 16,
+      dex = 17,
+      con = 13,
+      int = 4,
+      wis = 11,
+      cha = 4,
+    ]
+
+  \DndMonsterDetails[
+      %saving-throws = {Str +0, Dex +0, Con +0, Int +0, Wis +0, Cha +0},
+      skills = {Perception +3, Stealth +5},
+      %damage-vulnerabilities = {cold},
+      %damage-resistances = {bludgeoning, piercing, and slashing from nonmagical attacks},
+      %damage-immunities = {poison},
+      %condition-immunities = {poisoned},
+      senses = {Darkvision 60 ft., passive Perception 14},
+      %languages = {},
+      challenge = 2,
+    ]
+
+  % Traits
+  \DndMonsterAction{Water Breathing}
+  The squid can breathe only underwater.
+
+  \DndMonsterSection{Actions}
+  \DndMonsterMelee[
+    name=Tentacles,
+    mod=+5,
+    reach=20,
+    %targets=one target,
+    dmg=\DndDice{1},
+    dmg-type=bludgeoning,
+    %plus-dmg=\DndDice{2d6},
+    %plus-dmg-type=fire,
+    %or-dmg=\DndDice{1d10+1},
+    %or-dmg-when=if used with two hands,
+    extra={, and the target is grappled (escape DC 10). Until this grapple ends, the squid can't use its tentacles on another target}
+  ]
+\end{DndMonster}
+
 \end{document}
