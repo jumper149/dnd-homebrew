@@ -336,4 +336,57 @@ If the sea is your home you won't be able to avoid them.
   ]
 \end{DndMonster}
 
+\begin{DndMonster}[float]{Galápagos tortoise}
+  \DndMonsterType{Large beast, unaligned}
+
+  \DndMonsterBasics[
+      armor-class = {13 natural armor},
+      hit-points  = {\DndDice{8d6 + 8}},
+      speed       = {2 ft.},
+    ]
+
+  \DndMonsterAbilityScores[
+      str = 11,
+      dex = 3,
+      con = 14,
+      int = 3,
+      wis = 11,
+      cha = 5,
+    ]
+
+  \DndMonsterDetails[
+      saving-throws = {Con +4},
+      %skills = {Perception +3, Stealth +5},
+      %damage-vulnerabilities = {cold},
+      damage-resistances = {bludgeoning, piercing, and slashing from nonmagical attacks},
+      %damage-immunities = {poison},
+      %condition-immunities = {poisoned},
+      %senses = {Darkvision 60 ft., passive Perception 14},
+      %languages = {},
+      challenge = 1/2,
+    ]
+
+  % Traits
+  \DndMonsterAction{Tough}
+  The tortoise can survive for a whole year without food or water.
+
+  \DndMonsterAction{Delicious}
+  Tortoise meat is one of the most tasty foods.
+
+  \DndMonsterSection{Actions}
+  \DndMonsterMelee[
+    name=Bite,
+    mod=+1,
+    %reach=5,
+    %targets=one target,
+    dmg=\DndDice{1d4},
+    dmg-type=piercing,
+    %plus-dmg=\DndDice{2d6},
+    %plus-dmg-type=fire,
+    %or-dmg=\DndDice{1d10+1},
+    %or-dmg-when=if used with two hands,
+    %extra={}
+  ]
+\end{DndMonster}
+
 \end{document}
