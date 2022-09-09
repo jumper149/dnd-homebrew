@@ -1,5 +1,5 @@
 build:
-	cd Harpoon/ && make
+	cd Whaling/ && make
 
 clean:
-	cd Harpoon/ && make clean
+	cd Whaling/ && make clean
